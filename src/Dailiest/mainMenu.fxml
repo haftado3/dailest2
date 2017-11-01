@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.*?>
+<Group stylesheets="@styles/mainStyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1"
+       fx:controller="Dailiest.mainController">
+    <Pane fx:id="rootPane" prefHeight="600.0" prefWidth="800.0">
+        <Pane id="left" prefHeight="600.0" prefWidth="160.0">
+            <Pane id="profile" prefHeight="160.0" prefWidth="160.0"/>
+            <!-- this is left menu buttons -->
+            <VBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="200.0" nodeOrientation="LEFT_TO_RIGHT"
+                  prefHeight="300.0" prefWidth="120.0" spacing="20">
+                <Button id="black_button" fx:id="timeLine" mnemonicParsing="false" onMouseClicked="#buttonClicked"
+                        text="TimeLine"/>
+                <Button id="black_button" fx:id="event" mnemonicParsing="false" onMouseClicked="#buttonClicked"
+                        text="Event"/>
+                <Button id="black_button" fx:id="reminder" mnemonicParsing="false" onMouseClicked="#buttonClicked"
+                        text="Reminder"/>
+                <Button id="black_button" fx:id="setting" mnemonicParsing="false" onMouseClicked="#buttonClicked"
+                        text="Setting"/>
+                <Button id="black_button" fx:id="exit" mnemonicParsing="false" onAction="#close" text="Exit"/>
+            </VBox>
+        </Pane>
+        <!-- this is top menu -->
+        <Pane id="top" fx:id="top_pane" layoutX="160.0" prefHeight="160.0" prefWidth="640.0">
+            <ProgressBar fx:id="progress_bar" layoutX="70.0" layoutY="71.0" prefWidth="500.0" progress="0.0"/>
+        </Pane>
+        <!-- this is mid menu -->
+        <Pane id="mid" layoutX="160.0" layoutY="160.0" prefHeight="440.0" prefWidth="640.0">
+            <Pane fx:id="timeLine_pane" prefHeight="440.0" prefWidth="640.0">
+                <VBox fx:id="timeLine_box" prefHeight="440.0" prefWidth="640.0">
+                    <!-- this is timeLine horizontal box -->
+                    <HBox prefHeight="220.0" prefWidth="640.0">
+                        <!-- this is timeLine menu buttons -->
+                        <Button id="orange_button" fx:id="next_event" maxHeight="150.0" maxWidth="150.0" minHeight="0.0"
+                                minWidth="150.0" mnemonicParsing="false" onMouseClicked="#addEvent" prefHeight="150.0"
+                                prefWidth="150.0" text="time to next event">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" top="35.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <Button id="orange_button" layoutX="170.0" layoutY="45.0" maxHeight="150.0" maxWidth="150.0"
+                                minHeight="0.0" minWidth="150.0" mnemonicParsing="false" prefHeight="150.0"
+                                prefWidth="150.0" text="Button">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" top="35.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <Button id="orange_button" layoutX="325.0" layoutY="45.0" maxHeight="150.0" maxWidth="150.0"
+                                minHeight="0.0" minWidth="150.0" mnemonicParsing="false" prefHeight="150.0"
+                                prefWidth="150.0" text="Button">
+                            <HBox.margin>
+                                <Insets left="5.0" top="35.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <Button id="orange_button" layoutX="15.0" layoutY="45.0" maxHeight="150.0" maxWidth="150.0"
+                                minHeight="0.0" minWidth="150.0" mnemonicParsing="false" prefHeight="150.0"
+                                prefWidth="150.0" text="Button">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" top="35.0"/>
+                            </HBox.margin>
+                        </Button>
+                        <!-- this is end of timeLine buttons. -->
+                    </HBox>
+                    <HBox prefHeight="220.0" prefWidth="640.0"/>
+                </VBox>
+            </Pane>
+            <!-- this is event pane. -->
+            <Pane fx:id="event_pane" prefHeight="440.0" prefWidth="640.0" visible="false">
+                <VBox fx:id="event_box" prefHeight="440.0" prefWidth="640.0">
+                    <HBox prefHeight="220.0" prefWidth="640.0">
+                        <Button id="orange_button" fx:id="add_event" maxHeight="150.0" maxWidth="150.0" minHeight="0.0"
+                                minWidth="150.0" mnemonicParsing="false" onAction="#addLabel" prefHeight="150.0"
+                                prefWidth="150.0" text="add event">
+                            <HBox.margin>
+                                <Insets left="5.0" top="35.0"/>
+                            </HBox.margin>
+                        </Button>
+                    </HBox>
+                    <HBox prefHeight="220.0" prefWidth="640.0"/>
+                </VBox>
+            </Pane>
+            <!-- this is reminder pane. -->
+            <Pane fx:id="reminder_pane" prefHeight="440.0" prefWidth="640.0" visible="false">
+                <VBox fx:id="reminder_box" prefHeight="440.0" prefWidth="640.0">
+                    <HBox prefHeight="220.0" prefWidth="640.0"/>
+                    <HBox prefHeight="220.0" prefWidth="640.0"/>
+                </VBox>
+            </Pane>
+            <!-- this is setting pane. -->
+            <Pane fx:id="setting_pane" prefHeight="440.0" prefWidth="640.0" visible="false">
+                <VBox fx:id="setting_box" prefHeight="440.0" prefWidth="640.0">
+                    <HBox prefHeight="220.0" prefWidth="640.0"/>
+                    <HBox prefHeight="220.0" prefWidth="640.0"/>
+                </VBox>
+            </Pane>
+        </Pane>
+    </Pane>
+</Group>

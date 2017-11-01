@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DailiestV2:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DailiestV2_jar</output-path>
+    <root id="archive" name="DailiestV2.jar">
+      <element id="module-output" name="DailiestV2" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/jfoenix-9.0.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

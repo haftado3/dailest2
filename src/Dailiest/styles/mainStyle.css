@@ -1,0 +1,54 @@
+#top{
+    -fx-background-color: #21262C;
+}
+#left{
+    -fx-background-color: #121317;
+}
+#mid{
+    -fx-background-color:#151A1C;
+}
+#black_button{
+    -fx-background-radius: 7,7;
+    -fx-background-color:#121317;
+    -fx-padding:10px;
+    -fx-text-fill: #008080;
+    -fx-pref-width: 140px;
+    -fx-pref-height: 30px;
+    -fx-alignment: baseline-left;
+    -fx-graphic-text-gap: 10px;
+}
+#black_button:hover{
+    -fx-background-color: #15161A;
+}
+#button_clicked{
+    -fx-background-radius: 7,7;
+    -fx-background-color: #222327;
+    -fx-text-fill: white;
+    -fx-padding:10px;
+    -fx-pref-width: 140px;
+    -fx-pref-height: 30px;
+    -fx-alignment: baseline-left;
+    -fx-graphic-text-gap: 10px;
+}
+#orange_button{
+    -fx-pref-height: 150px;
+    -fx-pref-width: 150px;
+    -fx-background-color: rgb(21,26,28);
+    -fx-alignment: bottom-center;
+    -fx-content-display: top;
+    -fx-text-fill: #e64632;
+}
+#orange_button:hover{
+    -fx-background-color: rgb(23,28,30);
+}
+#orange_button:pressed{
+    -fx-background-color: rgb(30,30,30);
+}
+.progress-bar {
+    -fx-accent:red;
+}
+#profile{
+    -fx-background-radius: 80px;
+    -fx-background-color: gray;
+}
+

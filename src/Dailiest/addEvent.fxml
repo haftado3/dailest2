@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.Pane?>
+
+<Group xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Dailiest.AddEventController">
+    <Pane id="new_event_background" fx:id="addPane" prefHeight="267.0" prefWidth="369.0" stylesheets="@styles/addStyle.css">
+        <JFXTextField fx:id="new_event_name" labelFloat="true" layoutX="15.0" layoutY="15.0" prefHeight="30.0" prefWidth="150.0" promptText="event name" />
+        <JFXComboBox fx:id="new_event_occurrence" labelFloat="true" layoutX="200.0" layoutY="15.0" onAction="#boxChanged" prefHeight="30.0" prefWidth="150.0" promptText="Occurrence" />
+        <JFXTimePicker fx:id="new_event_start" layoutX="15.0" layoutY="65.0" prefHeight="30.0" prefWidth="150.0" promptText="Start Time" />
+        <JFXTimePicker fx:id="new_event_end" layoutX="200.0" layoutY="65.0" prefHeight="30.0" prefWidth="150.0" promptText="End Time" />
+        <JFXDatePicker fx:id="new_event_date" layoutX="15.0" layoutY="115.0" prefHeight="30.0" prefWidth="150.0" promptText="Begin Date" />
+        <JFXButton id="new_event_button" fx:id="new_event_add" buttonType="RAISED" layoutX="302.0" layoutY="205.0" onAction="#addToDB" text="ADD" />
+        <JFXTextField fx:id="new_event_describe" layoutX="15.0" layoutY="155.0" prefHeight="30.0" prefWidth="335.0" promptText="Describe" />
+        <JFXButton id="new_event_button" fx:id="new_event_cancel" buttonType="RAISED" layoutX="15.0" layoutY="205.0" onAction="#close" text="Cancel" />
+      <JFXCheckBox fx:id="new_real_time" checkedColor="#49ea4f" layoutX="200.0" layoutY="115.0" onAction="#realTime" prefHeight="30.0" prefWidth="76.0" selected="true" text="realTime" unCheckedColor="#4c4c4c" />
+      <JFXCheckBox fx:id="new_no_des" checkedColor="#49ea4f" layoutX="275.0" layoutY="115.0" onAction="#noDes" prefHeight="30.0" prefWidth="76.0" selected="true" text="noDes" unCheckedColor="#4c4c4c" />
+    </Pane>
+</Group>
